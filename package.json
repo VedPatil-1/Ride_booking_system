@@ -1,0 +1,30 @@
+{
+  "name": "ride_booking_system",
+  "version": "1.0.0",
+  "description": "Backend foundation for a ride booking system",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "worker": "node src/worker.js",
+    "billing": "node src/consumers/billingService.js",
+    "operations": "node src/consumers/operationsService.js",
+    "test:100": "node scripts/loadTest100.js",
+    "dev": "nodemon src/server.js",
+    "check": "node --check src/app.js && node --check src/server.js && node --check src/worker.js && node --check scripts/loadTest100.js && node --check src/config/env.js && node --check src/config/database.js && node --check src/config/redis.js && node --check src/config/rideQueue.js && node --check src/controllers/healthController.js && node --check src/controllers/rideController.js && node --check src/controllers/adminController.js && node --check src/services/driverAssignment.js && node --check src/services/assignmentRecovery.js && node --check src/services/processHeartbeat.js && node --check src/services/adminDashboard.js && node --check src/middleware/adminAuth.js && node --check src/events/constants.js && node --check src/events/rideEventPublisher.js && node --check src/consumers/streamConsumer.js && node --check src/consumers/billingService.js && node --check src/consumers/operationsService.js && node --check src/routes/healthRoutes.js && node --check src/routes/rideRoutes.js && node --check src/routes/adminRoutes.js && node --check src/models/Ride.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bullmq": "^6.7.7",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "ioredis": "^6.0.0",
+    "mongoose": "^9.12.2",
+    "redis": "^6.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
