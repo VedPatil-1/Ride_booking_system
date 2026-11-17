@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \# Ride Booking System
 
 
@@ -270,3 +271,6 @@ npm run test:100
 
 Ved Patil
 
+=======
+# Ride_booking_system
+>>>>>>> 8fe3e4967da1ba7e9bf29d1a7053399eba05a843
